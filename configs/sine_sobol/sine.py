@@ -22,8 +22,6 @@ def calc_KL ( x, X):
     for  m in range(1, KL_MAX):
         value += 0.2 * sqrt( calc_lambda(m) ) * calc_Phi(m,x) * X [m-1];
     return value
-print(x)
-print(X)
 
 
 u = calc_KL(x, X)
