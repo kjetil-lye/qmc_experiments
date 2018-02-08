@@ -2,7 +2,7 @@
 <config>
 <fvm>
   <name>
-    GENERATOR_kh
+    halton_kh
   </name>
   <platform>cpu</platform>
   <grid>
@@ -38,17 +38,17 @@
   </diffusion>
 </fvm>
 <uq>
-  <samples>SAMPLES</samples>
+  <samples>512</samples>
   <generator>auto</generator>
   <parameters>
     <parameter>
       <name>a</name>
       <length>40</length>
       <type>dll</type>
-      <library>libGENERATOR.so</library>
-      <create_function>GENERATOR_create</create_function>
-      <delete_function>GENERATOR_delete</delete_function>
-      <generator_function>GENERATOR_generate</generator_function>
+      <library>libhalton.so</library>
+      <create_function>halton_create</create_function>
+      <delete_function>halton_delete</delete_function>
+      <generator_function>halton_generate</generator_function>
     </parameter>
   </parameters>
   <stats>
