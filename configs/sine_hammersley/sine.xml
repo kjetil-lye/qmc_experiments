@@ -54,7 +54,7 @@
     <numberOfSaves>1</numberOfSaves>
     <writer>
       <type>netcdf</type>
-      <basename>kh</basename>
+      <basename>hammersley_sine</basename>
     </writer>
   </stat>
   </stats>
