@@ -1,0 +1,62 @@
+<config>
+<fvm>
+  <name>
+    sine_niederreiter2
+  </name>
+  <platform>cpu</platform>
+  <grid>
+    <lowerCorner>-1 0 0</lowerCorner>
+    <upperCorner>1 0 0</upperCorner>
+    <dimension>512 1 1</dimension>
+  </grid>
+  <boundary>periodic</boundary>
+  <flux>godunov</flux>
+  <endTime>2</endTime>
+  <equation>burgers</equation>
+  <reconstruction>weno2</reconstruction>
+  <cfl>auto</cfl>
+  <integrator>auto</integrator>
+  <initialData>
+    <python>sine.py</python>
+    <parameters>
+      <parameter>
+        <name>X</name>
+        <length>10</length>
+        <values><value>0</value></values>
+      </parameter>
+    </parameters>
+  </initialData>
+  <writer>
+    <type>netcdf</type>
+    <basename>niederreiter2_sine</basename>
+    <numberOfSaves>1</numberOfSaves>
+  </writer>
+</fvm>
+<uq>
+  <samples>4</samples>
+  <generator>auto</generator>
+  <parameters>
+    <parameter>
+      <name>X</name>
+      <length>10</length>
+      <type>dll</type>
+      <library>libniederreiter2.so</library>
+      <create_function>niederreiter2_create</create_function>
+      <delete_function>niederreiter2_delete</delete_function>
+      <generator_function>niederreiter2_generate</generator_function>
+    </parameter>
+  </parameters>
+  <stats>
+  <stat>
+    <name>
+      meanvar
+    </name>
+    <numberOfSaves>1</numberOfSaves>
+    <writer>
+      <type>netcdf</type>
+      <basename>kh</basename>
+    </writer>
+  </stat>
+  </stats>
+  </uq>
+</config>
