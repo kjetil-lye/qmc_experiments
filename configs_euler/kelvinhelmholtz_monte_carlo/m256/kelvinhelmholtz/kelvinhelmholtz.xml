@@ -2,7 +2,7 @@
 <config>
 <fvm>
   <name>
-    GENERATOR_kh
+    monte_carlo_kh
   </name>
   <platform>cpu</platform>
   <grid>
@@ -38,17 +38,17 @@
   </diffusion>
 </fvm>
 <uq>
-  <samples>SAMPLES</samples>
+  <samples>256</samples>
   <generator>auto</generator>
   <parameters>
     <parameter>
       <name>a</name>
       <length>40</length>
-      <type>dll</type>
-      <library>libGENERATOR.so</library>
-      <create_function>GENERATOR_create</create_function>
-      <delete_function>GENERATOR_delete</delete_function>
-      <generator_function>GENERATOR_generate</generator_function>
+      <type>uniform</type>
+      <library>libmonte_carlo.so</library>
+      <create_function>monte_carlo_create</create_function>
+      <delete_function>monte_carlo_delete</delete_function>
+      <generator_function>monte_carlo_generate</generator_function>
     </parameter>
   </parameters>
   <stats>
