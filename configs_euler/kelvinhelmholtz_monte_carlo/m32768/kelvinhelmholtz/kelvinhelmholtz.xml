@@ -44,7 +44,7 @@
     <parameter>
       <name>a</name>
       <length>40</length>
-      <type>dll</type>
+      <type>uniform</type>
       <library>libmonte_carlo.so</library>
       <create_function>monte_carlo_create</create_function>
       <delete_function>monte_carlo_delete</delete_function>
