@@ -103,3 +103,4 @@ ENV/
 
 alsuqcli_mpi_log_*.txt
 *.nc
+lsf.*
