@@ -1,0 +1,24 @@
+{
+    "report": {
+        "executable": "alsuqcli",
+        "name": "sobol_kh",
+        "currentWorkingDirectory": "\/cluster\/scratch\/klye\/qmc_experiments\/configs_euler512\/kelvinhelmholtz_sobol\/m64",
+        "endTime": "20180212T231841",
+        "cpuDuration": "22035873",
+        "cpuDurationHuman": "06:07:15",
+        "wallTime": "22051000",
+        "wallTimeHuman": "06:07:31",
+        "timesteps": "176875",
+        "command": "\/cluster\/home\/klye\/alsvinn\/build\/alsuqcli\/alsuqcli --multi-sample 4 kelvinhelmholtz\/kelvinhelmholtz.xml ",
+        "revision": "a68f7dee3b70c435b6534ed3920444af490d804d",
+        "versionControlStatus": "DIRTY",
+        "buildType": "Release",
+        "cxxFlags": "",
+        "cudaFlags": "",
+        "cudaVersion": "",
+        "mpiEnabled": "true",
+        "mpiProcesses": "4",
+        "ompEnabled": "true",
+        "ompThreads": "1"
+    }
+}

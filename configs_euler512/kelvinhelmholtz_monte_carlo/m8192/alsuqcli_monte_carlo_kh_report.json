@@ -1,0 +1,24 @@
+{
+    "report": {
+        "executable": "alsuqcli",
+        "name": "monte_carlo_kh",
+        "currentWorkingDirectory": "\/cluster\/scratch\/klye\/qmc_experiments\/configs_euler512\/kelvinhelmholtz_monte_carlo\/m8192",
+        "endTime": "20180214T064405",
+        "cpuDuration": "47953266",
+        "cpuDurationHuman": "13:19:13",
+        "wallTime": "47963000",
+        "wallTimeHuman": "13:19:23",
+        "timesteps": "177491",
+        "command": "\/cluster\/home\/klye\/alsvinn\/build\/alsuqcli\/alsuqcli --multi-sample 512 kelvinhelmholtz\/kelvinhelmholtz.xml ",
+        "revision": "a68f7dee3b70c435b6534ed3920444af490d804d",
+        "versionControlStatus": "DIRTY",
+        "buildType": "Release",
+        "cxxFlags": "",
+        "cudaFlags": "",
+        "cudaVersion": "",
+        "mpiEnabled": "true",
+        "mpiProcesses": "512",
+        "ompEnabled": "true",
+        "ompThreads": "1"
+    }
+}

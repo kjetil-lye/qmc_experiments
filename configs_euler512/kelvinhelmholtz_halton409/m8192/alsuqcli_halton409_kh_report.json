@@ -1,0 +1,24 @@
+{
+    "report": {
+        "executable": "alsuqcli",
+        "name": "halton409_kh",
+        "currentWorkingDirectory": "\/cluster\/scratch\/klye\/qmc_experiments\/configs_euler512\/kelvinhelmholtz_halton409\/m8192",
+        "endTime": "20180214T050235",
+        "cpuDuration": "84093215",
+        "cpuDurationHuman": "23:21:33",
+        "wallTime": "84102000",
+        "wallTimeHuman": "23:21:42",
+        "timesteps": "178344",
+        "command": "\/cluster\/home\/klye\/alsvinn\/build\/alsuqcli\/alsuqcli --multi-sample 512 kelvinhelmholtz\/kelvinhelmholtz.xml ",
+        "revision": "a68f7dee3b70c435b6534ed3920444af490d804d",
+        "versionControlStatus": "DIRTY",
+        "buildType": "Release",
+        "cxxFlags": "",
+        "cudaFlags": "",
+        "cudaVersion": "",
+        "mpiEnabled": "true",
+        "mpiProcesses": "512",
+        "ompEnabled": "true",
+        "ompThreads": "1"
+    }
+}

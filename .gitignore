@@ -99,3 +99,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+alsuqcli_mpi_log_*.txt
+*.nc

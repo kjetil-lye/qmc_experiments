@@ -1,0 +1,24 @@
+{
+    "report": {
+        "executable": "alsuqcli",
+        "name": "hammersley_kh",
+        "currentWorkingDirectory": "\/cluster\/scratch\/klye\/qmc_experiments\/configs_euler512\/kelvinhelmholtz_hammersley\/m1024",
+        "endTime": "20180213T054004",
+        "cpuDuration": "40240087",
+        "cpuDurationHuman": "11:10:40",
+        "wallTime": "40240000",
+        "wallTimeHuman": "11:10:40",
+        "timesteps": "179010",
+        "command": "\/cluster\/home\/klye\/alsvinn\/build\/alsuqcli\/alsuqcli --multi-sample 64 kelvinhelmholtz\/kelvinhelmholtz.xml ",
+        "revision": "a68f7dee3b70c435b6534ed3920444af490d804d",
+        "versionControlStatus": "DIRTY",
+        "buildType": "Release",
+        "cxxFlags": "",
+        "cudaFlags": "",
+        "cudaVersion": "",
+        "mpiEnabled": "true",
+        "mpiProcesses": "64",
+        "ompEnabled": "true",
+        "ompThreads": "1"
+    }
+}
