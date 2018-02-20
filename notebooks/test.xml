@@ -29,22 +29,22 @@
 		</initialData>
 		<writer>
 			<type>netcdf</type>
-			<basename>brownian_halton</basename>
+			<basename>brownian_GENERATOR</basename>
 			<numberOfSaves>1</numberOfSaves>
 		</writer>
 	</fvm>
 	<uq>
-		<samples>2048</samples>
+		<samples>8</samples>
 		<generator>auto</generator>
 		<parameters>
 			<parameter>
 				<name>X</name>
 				<length>1024</length>
 				<type>dll</type>
-				<library>libhalton.so</library>
-				<create_function>halton_create</create_function>
-				<delete_function>halton_delete</delete_function>
-				<generator_function>halton_generate</generator_function>
+				<library>libGENERATOR.so</library>
+				<create_function>GENERATOR_create</create_function>
+				<delete_function>GENERATOR_delete</delete_function>
+				<generator_function>GENERATOR_generate</generator_function>
 			</parameter>
 		</parameters>
 		<stats>
@@ -53,7 +53,7 @@
 				<numberOfSaves>1</numberOfSaves>
 				<writer>
 					<type>netcdf</type>
-					<basename>brownian_halton</basename>
+					<basename>brownian_GENERATOR</basename>
 				</writer>
 			</stat>
 		</stats>
