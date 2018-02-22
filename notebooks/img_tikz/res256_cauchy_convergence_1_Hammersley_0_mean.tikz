@@ -1,0 +1,66 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Hammersley at $T=0$ (normalized time)
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=1.71801106031642e-05, ymax=0.0017644149106667,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Hammersley},{$O(M^{-0.553})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00142943859100342
+128 0.000786066055297852
+256 0.000370562076568604
+512 0.000260055065155029
+1024 0.000185593962669373
+2048 0.000127431005239487
+4096 9.16197896003723e-05
+8192 5.43957576155663e-05
+16384 3.94284725189209e-05
+32768 3.84093727916479e-05
+65536 2.87872971966863e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.000979225824582117
+128 0.000667483738513067
+256 0.00045498651076682
+512 0.000310138978727665
+1024 0.0002114044787045
+2048 0.000144102665842482
+4096 9.82267661979668e-05
+8192 6.69557189750868e-05
+16384 4.56399867062262e-05
+32768 3.11102385043399e-05
+65536 2.12061179164383e-05
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

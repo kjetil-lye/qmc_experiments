@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Convergence for Halton409 at $T=0$ (normalized time)
+against reference solution MC
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.000127490232259329, ymax=0.00648949765941245,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{Halton409},{$O(M^{-0.504})$}},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00542790520437981
+128 0.00360107748947644
+256 0.00262381922594404
+512 0.00179632219394474
+1024 0.00128261259265651
+2048 0.000808105500145207
+4096 0.000523108368940649
+8192 0.000369568132559971
+16384 0.000286837830013881
+32768 0.000226466186904263
+65536 0.000192761038767743
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.00502676058703392
+128 0.00354376533004641
+256 0.00249828343661957
+512 0.00176123968389463
+1024 0.00124163863021184
+2048 0.000875330315420362
+4096 0.000617090305061774
+8192 0.00043503628046786
+16384 0.000306691846834905
+32768 0.000216211596912902
+65536 0.000152424836597602
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

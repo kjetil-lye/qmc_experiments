@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Convergence for Sobol at $T=1$ (normalized time)
+against reference solution MC
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.000845131319434775, ymax=0.0421544802474197,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Sobol},{$O(M^{-0.513})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0323275627842514
+128 0.0276803244097335
+256 0.0180242293359428
+512 0.0120104529940427
+1024 0.00917449804170765
+2048 0.0059580650870875
+4096 0.00391494085364981
+8192 0.00254811361439384
+16384 0.00190799186403084
+32768 0.00148608538538821
+65536 0.00114369857925176
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0352911310968249
+128 0.0247348485681139
+256 0.0173361610884319
+512 0.0121505688808419
+1024 0.00851609092549321
+2048 0.00596875795384509
+4096 0.0041833831770092
+8192 0.00293204967281503
+16384 0.00205501502494468
+32768 0.00144031896591092
+65536 0.00100949078151803
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

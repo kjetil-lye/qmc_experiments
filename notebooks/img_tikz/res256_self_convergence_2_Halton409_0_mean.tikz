@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Self convergence for Halton409 at $T=0$ (normalized time)
+against reference solution with $M=131072$ samples
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=7.11362324323066e-05, ymax=0.00717094103132486,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{Halton409},{$O(M^{-0.590})$}},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00542863933267961
+128 0.0036084675956491
+256 0.00261967549450677
+512 0.00179020663332315
+1024 0.00126390745862286
+2048 0.000776726303762619
+4096 0.000487028225742114
+8192 0.000335017922105518
+16384 0.00022970554628088
+32768 0.000150145262581762
+65536 8.77320693557905e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.00581444996918929
+128 0.00386399191206598
+256 0.00256781528358272
+512 0.0017064412867975
+1024 0.00113401531796487
+2048 0.000753609720608905
+4096 0.000500811234204003
+8192 0.000332814035496099
+16384 0.000221171520641405
+32768 0.000146979503042638
+65536 9.76752081462004e-05
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

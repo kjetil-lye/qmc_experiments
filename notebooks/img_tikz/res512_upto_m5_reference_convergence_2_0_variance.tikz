@@ -24,9 +24,9 @@ tick align=outside,
 tick pos=left,
 x grid style={white!69.01960784313725!black},
 y grid style={white!69.01960784313725!black},
-legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
 legend cell align={left},
-legend entries={{Halton409},{$O(M^{-0.556})$},{Halton},{$O(M^{-0.878})$},{Hammersley},{$O(M^{-0.876})$},{Sobol},{$O(M^{-0.545})$},{Monte Carlo},{$O(M^{-0.529})$}}
+legend entries={{Halton409},{$O(M^{-0.556})$},{Halton},{$O(M^{-0.878})$},{Hammersley},{$O(M^{-0.876})$},{Sobol},{$O(M^{-0.545})$},{Monte Carlo},{$O(M^{-0.529})$}},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black}
 ]
 \addlegendimage{no markers, color0}
 \addlegendimage{no markers, color0}

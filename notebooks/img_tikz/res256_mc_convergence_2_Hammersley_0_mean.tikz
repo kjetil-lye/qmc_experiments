@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Convergence for Hammersley at $T=0$ (normalized time)
+against reference solution MC
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.000160742026318246, ymax=0.0216394789381426,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{Hammersley},{$O(M^{-0.602})$}},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0173168437073017
+128 0.00963085590822837
+256 0.00479016425321195
+512 0.00338509864303205
+1024 0.00216594247895099
+2048 0.00150061442364038
+4096 0.000993331701491656
+8192 0.000598830416599243
+16384 0.000434678716166336
+32768 0.000345786536133953
+65536 0.000252404329569906
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.013025948930385
+128 0.00858260616158957
+256 0.00565495296493365
+512 0.00372596533425101
+1024 0.00245498375638623
+2048 0.00161755268861936
+4096 0.00106578167519576
+8192 0.000702227870025437
+16384 0.000462687615031366
+32768 0.000304858064228723
+65536 0.000200866494598053
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

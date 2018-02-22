@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Self convergence for Monte Carlo at $T=0$ (normalized time)
+against reference solution with $M=131072$ samples
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.000109026659958494, ymax=0.00889665761603665,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Monte Carlo},{$O(M^{-0.543})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.006715484845582
+128 0.0047969535520027
+256 0.00327907873052072
+512 0.00244202455134152
+1024 0.00168261946323534
+2048 0.001204652437637
+4096 0.000814370735152594
+8192 0.000566600206057693
+16384 0.000377557305392992
+32768 0.000261226279271691
+65536 0.000133176592030753
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0072833585082789
+128 0.00500003411539551
+256 0.00343252925510963
+512 0.00235643533929198
+1024 0.00161769561031367
+2048 0.00111054992428284
+4096 0.000762393818998793
+8192 0.000523384246433509
+16384 0.000359303895950402
+32768 0.000246662543866876
+65536 0.000169334124212439
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}
