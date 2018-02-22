@@ -1,0 +1,60 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Hammersley at $T=0$ (normalized time)
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=50.213382265392, xmax=10441.2006589994,
+ymin=0.000365241642576397, ymax=0.0136752201341876,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend entries={{Hammersley},{$O(M^{-0.627})$}},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0115989381699058
+128 0.00614373308431192
+256 0.00292115658231854
+512 0.0020136426130693
+1024 0.00148381702359294
+2048 0.00104430331444175
+4096 0.000815778704519246
+8192 0.000431899368957259
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.00903214821642468
+128 0.00584759829205066
+256 0.0037858552545686
+512 0.00245104046015418
+1024 0.00158685394272883
+2048 0.00102736183938621
+4096 0.000665135158697706
+8192 0.000430622164825719
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

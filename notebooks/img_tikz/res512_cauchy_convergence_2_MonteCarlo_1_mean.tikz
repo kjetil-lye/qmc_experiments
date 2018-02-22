@@ -1,0 +1,60 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Monte Carlo at $T=1$ (normalized time)
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=50.213382265392, xmax=10441.2006589994,
+ymin=0.00215388048075706, ymax=0.0248091771053581,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend entries={{Monte Carlo},{$O(M^{-0.454})$}},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0219415828297891
+128 0.0161859984391906
+256 0.0109116240711117
+512 0.00897608852289401
+1024 0.00694578566200451
+2048 0.00491535965315632
+4096 0.00305576809982797
+8192 0.00240694759661076
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0222007335706516
+128 0.0162028961726617
+256 0.0118254580888765
+512 0.0086306458747617
+1024 0.00629895667937022
+2048 0.00459720579714762
+4096 0.00335520661866828
+8192 0.00244875081749444
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}
