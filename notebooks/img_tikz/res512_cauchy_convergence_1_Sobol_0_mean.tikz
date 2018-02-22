@@ -1,0 +1,60 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Sobol at $T=0$ (normalized time)
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=50.213382265392, xmax=10441.2006589994,
+ymin=2.8233378693741e-05, ymax=0.000560249302778822,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{Sobol},{$O(M^{-0.543})$}},
+legend cell align={left},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.000440061092376709
+128 0.000320777297019958
+256 0.000308774411678314
+512 0.000141330063343048
+1024 0.000107446685433388
+2048 7.14641064405441e-05
+4096 5.63235953450203e-05
+8192 3.23404092341661e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.000489101130839993
+128 0.00033560739644625
+256 0.000230284326589049
+512 0.000158014607646066
+1024 0.000108425165530686
+2048 7.43982894713676e-05
+4096 5.10500071563083e-05
+8192 3.50290745819108e-05
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

@@ -1,0 +1,61 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Self convergence for Halton at $T=0$ (normalized time)
+against reference solution with $M=16384$ samples
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=50.213382265392, xmax=10441.2006589994,
+ymin=4.43700971309121e-05, ymax=0.00237067870328059,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Halton},{$O(M^{-0.713})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00197850493714213
+128 0.00112140411511064
+256 0.000599321443587542
+512 0.000389477238059044
+1024 0.000224377494305372
+2048 0.000159518793225288
+4096 0.000108247622847557
+8192 5.31650148332119e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0017988664053507
+128 0.00109720473638862
+256 0.000669231594949333
+512 0.000408192667079224
+1024 0.000248973979583055
+2048 0.000151859765029518
+4096 9.26256963616853e-05
+8192 5.64963314991266e-05
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

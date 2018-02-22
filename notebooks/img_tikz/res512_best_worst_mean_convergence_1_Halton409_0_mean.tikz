@@ -1,0 +1,111 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+
+\begin{axis}[
+title={Convergence for Halton409 at $T=0$ (normalized time)
+against reference solution MC
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=50.213382265392, xmax=10441.2006589994,
+ymin=2.73205257937954e-05, ymax=0.000832072090536449,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{worst case error},{$O(M^{-0.444})$},{best case error},{$O(M^{-0.614})$},{average error},{$O(M^{-0.509})$}},
+legend cell align={left},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color1}
+\addlegendimage{no markers, color1}
+\addlegendimage{no markers, color2}
+\addlegendimage{no markers, color2}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.000660435995087028
+128 0.000460155541077256
+256 0.000319150509312749
+512 0.000228794990107417
+1024 0.000168219907209277
+2048 0.000120759708806872
+4096 9.29052475839853e-05
+8192 8.14583618193865e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.000609258334456327
+128 0.000447749474869694
+256 0.00032905514936449
+512 0.000241825613206577
+1024 0.00017771983606906
+2048 0.000130607919126552
+4096 9.59849441451162e-05
+8192 7.05402058631229e-05
+};
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.000651576323434711
+128 0.000452099135145545
+256 0.000309214228764176
+512 0.00021074921824038
+1024 0.000147245125845075
+2048 9.05713532119989e-05
+4096 5.45254442840815e-05
+8192 3.19101382046938e-05
+};
+\addplot [semithick, color1, dashed]
+table {%
+64 0.000712395755417143
+128 0.000465555868758869
+256 0.000304244186307529
+512 0.000198825814716285
+1024 0.000129934133096749
+2048 8.49129121773989e-05
+4096 5.54912129908e-05
+8192 3.62639160550418e-05
+};
+\addplot [semithick, color2, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.000655331090092659
+128 0.000456269271671772
+256 0.000314974226057529
+512 0.000219538621604443
+1024 0.000157908629626036
+2048 0.00010480685159564
+4096 7.38318078219891e-05
+8192 5.84503635764122e-05
+};
+\addplot [semithick, color2, dashed]
+table {%
+64 0.000642394725003428
+128 0.000451311289335092
+256 0.000317066551068297
+512 0.000222753563187961
+1024 0.000156494432306878
+2048 0.000109944402201939
+4096 7.72409049788947e-05
+8192 5.426522208016e-05
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

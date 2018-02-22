@@ -1,0 +1,61 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Self convergence for Hammersley at $T=1$ (normalized time)
+against reference solution with $M=16384$ samples
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=50.213382265392, xmax=10441.2006589994,
+ymin=0.00221637011519549, ymax=0.103167156852108,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend entries={{Hammersley},{$O(M^{-0.678})$}},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0866418791900249
+128 0.0405976310035656
+256 0.0232382207784263
+512 0.0163723477869379
+1024 0.00991586260685014
+2048 0.00919751029095768
+4096 0.00376203915591892
+8192 0.00268157652754742
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0709795571549893
+128 0.0443500033263423
+256 0.0277111167480468
+512 0.0173146772002106
+1024 0.0108186923418964
+2048 0.00675982015923374
+4096 0.00422372382364771
+8192 0.00263910023021551
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

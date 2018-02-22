@@ -1,0 +1,121 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+\definecolor{color3}{rgb}{0.83921568627451,0.152941176470588,0.156862745098039}
+\definecolor{color4}{rgb}{0.580392156862745,0.403921568627451,0.741176470588235}
+
+\begin{axis}[
+title={Self convergence against reference solution $M=16384$
+$T=0$ (normalized time)
+mean
+resolution=$512 \times 512$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=57.6800296070931, xmax=568.099569698736,
+ymin=0.00144334858730301, ymax=0.0182067238242093,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend entries={{Halton409},{$O(M^{-0.552})$},{Halton},{$O(M^{-0.797})$},{Hammersley},{$O(M^{-0.821})$},{Sobol},{$O(M^{-0.567})$},{Monte Carlo},{$O(M^{-0.513})$}},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color1}
+\addlegendimage{no markers, color1}
+\addlegendimage{no markers, color2}
+\addlegendimage{no markers, color2}
+\addlegendimage{no markers, color3}
+\addlegendimage{no markers, color3}
+\addlegendimage{no markers, color4}
+\addlegendimage{no markers, color4}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00534577976858516
+128 0.00361240213036713
+256 0.00249162980613264
+512 0.00168954597685012
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.00533114541680874
+128 0.00363594208608947
+256 0.00247978132648841
+512 0.00169125780378267
+};
+\addplot [semithick, color1, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0162252982083298
+128 0.0096050169922959
+256 0.00498976830514848
+512 0.00319946847793019
+};
+\addplot [semithick, color1, dashed]
+table {%
+64 0.0161780661606121
+128 0.00931001489608474
+256 0.00535764760168593
+512 0.00308317313605184
+};
+\addplot [semithick, color2, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0158560913147
+128 0.0087666253364643
+256 0.00439981638501493
+512 0.00299097163925266
+};
+\addplot [semithick, color2, dashed]
+table {%
+64 0.0153621241847409
+128 0.0086935334446967
+256 0.00491973133696776
+512 0.00278411034844612
+};
+\addplot [semithick, color3, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0055115097711249
+128 0.0040008317319772
+256 0.00310130441829606
+512 0.0016196096228048
+};
+\addplot [semithick, color3, dashed]
+table {%
+64 0.00584819562724357
+128 0.00394823717126271
+256 0.00266553613355918
+512 0.00179955827654531
+};
+\addplot [semithick, color4, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00685737969690229
+128 0.00463582928304308
+256 0.00314841805847276
+512 0.00238453002173206
+};
+\addplot [semithick, color4, dashed]
+table {%
+64 0.00670024051161339
+128 0.00469526671732194
+256 0.00329025943301291
+512 0.0023056852332992
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}
