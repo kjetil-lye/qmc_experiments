@@ -1,0 +1,33 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\begin{axis}[
+title={Sobol, $M=65536$},
+xlabel={$x$},
+ylabel={$y$},
+xmin=0, xmax=1,
+ymin=0, ymax=1,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+colorbar,
+colormap/viridis,
+point meta min=1.01073901163239,
+point meta max=2.02452586742403,
+colorbar style={ylabel={}}
+]
+\addplot graphics [includegraphics cmd=\pgfimage,xmin=0, xmax=1, ymin=0, ymax=1] {res256_single_Sobol_65536_mean_1_img000.png};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

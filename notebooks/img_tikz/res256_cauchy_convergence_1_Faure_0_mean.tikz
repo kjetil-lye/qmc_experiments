@@ -1,0 +1,66 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Faure at $T=0$ (normalized time)
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=7.33366551592131e-06, ymax=0.00155049781344614,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend cell align={left},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend entries={{Faure},{$O(M^{-0.659})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.00121557712554932
+128 0.000713229179382324
+256 0.000250279903411865
+512 0.000198140740394592
+1024 0.000134684145450592
+2048 7.98888504505157e-05
+4096 5.39980828762054e-05
+8192 4.14447858929634e-05
+16384 2.28234566748142e-05
+32768 1.47342216223478e-05
+65536 1.1103693395853e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.000899378890520585
+128 0.000569704165218616
+256 0.000360874420434278
+512 0.000228592935201381
+1024 0.000144800315747232
+2048 9.17225697374548e-05
+4096 5.81009078317777e-05
+8192 3.6803542470946e-05
+16384 2.33129014495346e-05
+32768 1.47673657888983e-05
+65536 9.35426646979957e-06
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

@@ -20,8 +20,8 @@ tick align=outside,
 tick pos=left,
 x grid style={white!69.01960784313725!black},
 y grid style={white!69.01960784313725!black},
-legend entries={{Halton},{$O(M^{-0.641})$}},
 legend cell align={left},
+legend entries={{Halton},{$O(M^{-0.641})$}},
 legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black}
 ]
 \addlegendimage{no markers, color0}

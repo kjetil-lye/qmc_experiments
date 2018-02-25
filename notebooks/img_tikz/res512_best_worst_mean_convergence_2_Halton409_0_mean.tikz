@@ -22,9 +22,9 @@ tick align=outside,
 tick pos=left,
 x grid style={white!69.01960784313725!black},
 y grid style={white!69.01960784313725!black},
-legend entries={{worst case error},{$O(M^{-0.449})$},{best case error},{$O(M^{-0.619})$},{average error},{$O(M^{-0.512})$}},
 legend cell align={left},
-legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black}
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend entries={{worst case error},{$O(M^{-0.449})$},{best case error},{$O(M^{-0.619})$},{average error},{$O(M^{-0.512})$}}
 ]
 \addlegendimage{no markers, color0}
 \addlegendimage{no markers, color0}

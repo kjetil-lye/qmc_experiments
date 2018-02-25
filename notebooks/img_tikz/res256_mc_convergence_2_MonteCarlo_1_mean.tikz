@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Convergence for Monte Carlo at $T=1$ (normalized time)
+against reference solution MC
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.000579181945042607, ymax=0.0433567536113429,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Monte Carlo},{$O(M^{-0.538})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0306230532835376
+128 0.0226309979851799
+256 0.0151616697223524
+512 0.0128334495155961
+1024 0.0103393230780677
+2048 0.0066559358960242
+4096 0.00369527325687658
+8192 0.00270306392684005
+16384 0.00180658634635858
+32768 0.00123498377185972
+65536 0.000704705760331097
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0356339486646914
+128 0.0245425558550199
+256 0.0169034606174198
+512 0.011642103721085
+1024 0.00801839233516608
+2048 0.00552259429919065
+4096 0.00380363625507498
+8192 0.00261971964209667
+16384 0.00180430791562423
+32768 0.00124270055546048
+65536 0.000855898628592729
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

@@ -1,0 +1,66 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Latin Random at $T=0$ (normalized time)
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=2.19590071374382e-05, ymax=0.000900726490934392,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Latin Random},{$O(M^{-0.483})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.000754475593566895
+128 0.000540733337402344
+256 0.000395685434341431
+512 0.000282049179077148
+1024 0.0001988485455513
+2048 0.00014306977391243
+4096 0.000102030113339424
+8192 6.95642083883286e-05
+16384 5.41433691978455e-05
+32768 3.88354528695345e-05
+65536 2.59974040091038e-05
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.00076080901909982
+128 0.000544441566266853
+256 0.000389607130879994
+512 0.000278806259179228
+1024 0.00019951618950593
+2048 0.000142775524452545
+4096 0.00010217140991505
+8192 7.31147515938478e-05
+16384 5.23215536036431e-05
+32768 3.74417598613471e-05
+65536 2.67936497477623e-05
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Convergence for Latin Random at $T=1$ (normalized time)
+against reference solution MC
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{1}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.0006382942599848, ymax=0.0305325592418419,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{Latin Random},{$O(M^{-0.485})$}},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0256101007560614
+128 0.0164604595071924
+256 0.0116010575681698
+512 0.00796364903857527
+1024 0.00567044960397614
+2048 0.00368313482988863
+4096 0.00278104669840904
+8192 0.00201867590390969
+16384 0.0015588181886974
+32768 0.00138271571343418
+65536 0.000760979329692833
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0226312389346589
+128 0.0161717531298863
+256 0.0115559559089569
+512 0.00825761535544131
+1024 0.00590069847061015
+2048 0.00421650088340791
+4096 0.00301301274558117
+8192 0.00215302831804395
+16384 0.00153850359415092
+32768 0.00109937862376364
+65536 0.000785590207902935
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

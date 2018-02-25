@@ -1,0 +1,66 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Cauchy Convergence for Halton409 at $T=1$ (normalized time)
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=0.000521780958834556, ymax=0.0312915623657184,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend entries={{Halton409},{$O(M^{-0.521})$}},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0259783663901414
+128 0.0149511954445182
+256 0.0109621493435563
+512 0.00769663433007827
+1024 0.00514346661834696
+2048 0.00420309854628718
+4096 0.00295639425232147
+8192 0.00168890269186356
+16384 0.00124811094283057
+32768 0.000870955439179102
+65536 0.000672405957874197
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.023313952382282
+128 0.0162436894605331
+256 0.0113175768296911
+512 0.00788537269240287
+1024 0.00549402963494528
+2048 0.0038278928348863
+4096 0.00266703394939365
+8192 0.00185822080032958
+16384 0.00129469088444207
+32768 0.000902058832814754
+65536 0.000628497618726784
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}

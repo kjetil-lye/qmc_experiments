@@ -1,0 +1,67 @@
+% This file was created by matplotlib2tikz v0.6.14.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+
+\begin{axis}[
+title={Convergence for Faure at $T=0$ (normalized time)
+against reference solution MC
+mean
+resolution=$256 \times 256$},
+xlabel={M},
+ylabel={Error ($||\cdot||_{L^{2}}$)},
+xmin=45.254833995939, xmax=92681.900023683,
+ymin=9.75272180774589e-05, ymax=0.0212432005838195,
+xmode=log,
+ymode=log,
+width=\figurewidth,
+height=\figureheight,
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+y grid style={white!69.01960784313725!black},
+legend style={at={(1,0.5)}, anchor=west, draw=white!80.0!black},
+legend cell align={left},
+legend entries={{Faure},{$O(M^{-0.635})$}}
+]
+\addlegendimage{no markers, color0}
+\addlegendimage{no markers, color0}
+\addplot [semithick, color0, mark=*, mark size=3, mark options={solid}]
+table {%
+64 0.0166319413436451
+128 0.00850518236843719
+256 0.00342878688954195
+512 0.0021758288843724
+1024 0.00124785310653347
+2048 0.000823691866735577
+4096 0.000617254162714526
+8192 0.000478250133007128
+16384 0.00029962634509785
+32768 0.000215842142507623
+65536 0.000177873347981134
+};
+\addplot [semithick, color0, dashed]
+table {%
+64 0.0101754744139942
+128 0.00655148097334375
+256 0.00421817216552137
+512 0.0027158708832971
+1024 0.00174861394113563
+2048 0.00112584539049289
+4096 0.000724875750716536
+8192 0.000466711378324179
+16384 0.000300492202204228
+32768 0.000193471956715028
+65536 0.00012456695302097
+};
+\node at (axis cs:0.95,0.01)[
+  scale=0.15,
+  anchor=south east,
+  text=white!50.19607843137255!black,
+  rotate=0.0,
+  align=right
+]{ By Kjetil Olsen Lye
+kjetil.o.lye@gmail.com};
+\end{axis}
+
+\end{tikzpicture}
