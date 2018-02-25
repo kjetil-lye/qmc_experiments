@@ -12,7 +12,7 @@ do
     do
 	mkdir "euler_brownian_${generator}";
 	cd "euler_brownian_${generator}";
-	for samples in 64 128 256 512 1024 2048 4096 8192 $((2*8192)) $((4*8192)) $((8*8192))
+	for samples in 64 128 256 512 1024 2048 4096 8192 $((2*8192)) $((4*8192)) $((8*8192)) $((16*8192))
 	do
 	    mkdir "m${samples}";
 	    cd "m${samples}";
