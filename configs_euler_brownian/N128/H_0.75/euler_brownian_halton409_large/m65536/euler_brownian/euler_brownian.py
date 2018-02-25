@@ -69,8 +69,8 @@ def fBm(N, H, rand):
 #  http://doi.org/http://dx.doi.org/10.18637/jss.v023.i01
 # in the section 2.3
 def init_global(rho, ux, uy, p, nx, ny, nz):
-    dux = fBm(nx, HURINDEX, RandomVariable(X[:nx*nx]))
-    duy= fBm(nx, HURINDEX, RandomVariable(X[nx*nx:]))
+    dux = fBm(nx, 0.75, RandomVariable(X[:nx*nx]))
+    duy= fBm(nx, 0.75, RandomVariable(X[nx*nx:]))
     rho[:,:,0] = 4*ones_like(rho[:,:,0])
     ux[:,:,0] = dux[:-1,:-1]
     uy[:,:,0] = duy[:-1,:-1]
