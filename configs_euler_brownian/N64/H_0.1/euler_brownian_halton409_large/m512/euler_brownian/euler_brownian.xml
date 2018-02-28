@@ -1,0 +1,65 @@
+<config>
+<fvm>
+  <name>
+    brownian
+  </name>
+  <platform>cpu</platform>
+  <grid>
+    <lowerCorner>0 0 0</lowerCorner>
+    <upperCorner>1 1 0</upperCorner>
+    <dimension>64 64 1</dimension>
+  </grid>
+  <boundary>periodic</boundary>
+  <flux>hll3</flux>
+  <endTime>2</endTime>
+  <equation>euler2</equation>
+  <equationParameters>
+    <gamma>1.4</gamma>
+  </equationParameters>
+  <reconstruction>wenof2</reconstruction>
+  <cfl>auto</cfl>
+  <integrator>auto</integrator>
+
+  <initialData>
+    <python>euler_brownian.py</python>
+    <parameters>
+      <parameter>
+        <name>X</name>
+        <length>8192</length>
+        <values><value>0</value></values>
+      </parameter>
+    </parameters>
+  </initialData>
+  <diffusion>
+    <name>none</name>
+    <reconstruction>none</reconstruction>
+  </diffusion>
+</fvm>
+<uq>
+  <samples>512</samples>
+  <generator>auto</generator>
+  <parameters>
+    <parameter>
+      <name>X</name>
+      <length>8192</length>
+      <type>dll</type>
+      <library>libhalton409_large.so</library>
+      <create_function>halton409_large_create</create_function>
+      <delete_function>halton409_large_delete</delete_function>
+      <generator_function>halton409_large_generate</generator_function>
+    </parameter>
+  </parameters>
+  <stats>
+  <stat>
+    <name>
+      meanvar
+    </name>
+    <numberOfSaves>10</numberOfSaves>
+    <writer>
+      <type>netcdf</type>
+      <basename>brownian</basename>
+    </writer>
+  </stat>
+</stats>
+</uq>
+</config>
