@@ -44,7 +44,7 @@
       <length>131072</length>
       <type>dll</type>
       <library>libhalton409_large.so</library>
-      <create_function>halton409_large_create</create_function>
+      <create_function>halton409_large_create</create_function><make_parameters_function>halton409_large_make_parameters</make_parameters_function><set_parameter_function>halton409_large_set_parameter</set_parameter_function><delete_parameters_function>halton409_large_delete_parameters</delete_parameters_function>
       <delete_function>halton409_large_delete</delete_function>
       <generator_function>halton409_large_generate</generator_function>
     </parameter>

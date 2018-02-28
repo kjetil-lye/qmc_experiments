@@ -44,7 +44,7 @@
       <length>8192</length>
       <type>uniform</type>
       <library>libmonte_carlo.so</library>
-      <create_function>monte_carlo_create</create_function>
+      <create_function>monte_carlo_create</create_function><make_parameters_function>monte_carlo_make_parameters</make_parameters_function><set_parameter_function>monte_carlo_set_parameter</set_parameter_function><delete_parameters_function>monte_carlo_delete_parameters</delete_parameters_function>
       <delete_function>monte_carlo_delete</delete_function>
       <generator_function>monte_carlo_generate</generator_function>
     </parameter>
