@@ -1,4 +1,5 @@
 AUTHORS = "Kjetil Olsen Lye @ ETHZ <kjetil.o.lye@gmail.com>"
+import latex_plots
 import numpy
 import glob
 import sys
@@ -223,6 +224,7 @@ def savePlot(name):
     gitMetadata = get_git_metadata()
     informationText = 'By %s\nCommit: %s\nRepo: %s\nHostname: %s' % (
     AUTHORS, gitMetadata['git_commit'], gitMetadata['git_remote_url'], socket.gethostname())
+    informationText = informationText.replace("_", "\\_")
     textcolor = 'gray'
 
     # we also have some 3d plots, which we need to use a special text function,
@@ -232,7 +234,7 @@ def savePlot(name):
     else:
         text_function = ax.text
     try:
-
+        
         text_function(0.95, 0.01, informationText,
                       family='monospace',
                       fontsize=3, color=textcolor,
@@ -244,6 +246,7 @@ def savePlot(name):
     if gitMetadata['git_short_commit'] != "unkown":
         try:
             if not name.endswith("_notitle"):
+        
                 text_function(0.2, 0.93, "@" + gitMetadata['git_short_commit'],
                               fontsize=10, family='monospace',
                               ha='right', va='bottom', color=textcolor, alpha=0.5, transform=ax.transAxes)
